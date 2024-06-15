@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Refugee Impact in Seattle</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.7.1/dist/leaflet.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.7.1/dist/leaflet.css" />
 </head>
 <body>
     <header>
@@ -22,47 +24,51 @@
     
     <section id="introduction">
         <h2>Introduction</h2>
-        <p>Start with refugee immigration statistics - particularly in the Washington/Seattle area.</p>
-        <p>Show demographics on how many refugees enter the Washington/Seattle area over time.</p>
-        <p>Show that Washington is one of the top states for initial refugee resettlement.</p>
-        <img src="images/map.png" alt="Map of refugee immigration to Washington">
+        <p>Washington State, particularly the Seattle area, has seen a significant influx of refugees over the years. The state ranks as one of the top destinations for initial refugee resettlement in the U.S. This website explores the impact of refugee immigration on various neighborhoods in Seattle, providing detailed statistics, demographic information, and a comprehensive analysis of housing trends, crime rates, financial stability, and cultural integration.</p>
+        <img src="images/statistics_placeholder.png" alt="Refugee Statistics">
+        <img src="images/demographics_placeholder.png" alt="Demographics Over Time">
+        <img src="images/map_placeholder.png" alt="Map of Refugee Immigration to Washington">
     </section>
     
     <section id="neighborhoods">
         <h2>Neighborhoods</h2>
         <div class="neighborhood" id="rainier-valley">
             <h3>Rainier Valley</h3>
-            <p>In Rainier Valley, the neighborhood with the highest concentration of refugees is Rainier Beach. This area is known for its significant refugee population from Somalia, Vietnam, Ethiopia, and other countries.</p>
-            <p>Columbia City and Hillman City, also within Rainier Valley, are notable for their diverse populations, including many immigrants and refugees.</p>
+            <p>Rainier Valley is one of Seattle's most ethnically diverse neighborhoods. Rainier Beach, located in the southern part of Rainier Valley, is home to a significant refugee population, with communities from Somalia, Vietnam, Ethiopia, and other countries. Columbia City and Hillman City, also within Rainier Valley, are notable for their diverse populations and range of community organizations that support the refugee population.</p>
+            <div id="rainier-map" class="map"></div>
+            <img src="images/rainier_valley_placeholder.png" alt="Rainier Valley">
         </div>
         <div class="neighborhood" id="tukwila">
             <h3>Tukwila</h3>
-            <p>In Tukwila, the neighborhood with the highest population of refugees is the area around the Riverton Park United Methodist Church.</p>
-            <p>This location has become a significant hub for asylum seekers and refugees, particularly from countries like Venezuela, Angola, and Congo.</p>
+            <p>Tukwila, located south of Seattle, has a high concentration of refugees, particularly from Somalia, Burma (Myanmar), and Bhutan. The area around Riverton Park United Methodist Church has become a significant hub for asylum seekers, with the church providing shelter and resources to a large number of migrants from countries like Venezuela, Angola, and Congo.</p>
+            <div id="tukwila-map" class="map"></div>
+            <img src="images/tukwila_placeholder.png" alt="Tukwila">
         </div>
         <!-- Add more neighborhoods as needed -->
     </section>
     
     <section id="policy">
         <h2>Policy Intervention</h2>
-        <p>Discuss policy interventions from Seattle government, housing trends over time, and neighborhood histories.</p>
+        <p>Policy interventions from the Seattle government play a crucial role in supporting refugee populations. This section explores various policies, housing trends over time, and the historical context of the neighborhoods discussed. Interactive charts and graphs provide a visual representation of these trends and interventions.</p>
+        <img src="images/policy_placeholder.png" alt="Policy Intervention">
     </section>
     
     <section id="questions">
         <h2>Key Questions</h2>
         <ul>
-            <li>Is it safe?</li>
-            <li>Is it livable?</li>
-            <li>Is it affordable?</li>
-            <li>Is it accommodating to their needs?</li>
-            <li>Is it accommodating to their religious duties?</li>
-            <li>Is it accommodating to their culture?</li>
+            <li>Is it safe? <img src="images/safety_placeholder.png" alt="Safety"></li>
+            <li>Is it livable? <img src="images/livability_placeholder.png" alt="Livability"></li>
+            <li>Is it affordable? <img src="images/affordability_placeholder.png" alt="Affordability"></li>
+            <li>Is it accommodating to their needs? <img src="images/needs_placeholder.png" alt="Needs"></li>
+            <li>Is it accommodating to their religious duties? <img src="images/religious_placeholder.png" alt="Religious Duties"></li>
+            <li>Is it accommodating to their culture? <img src="images/culture_placeholder.png" alt="Culture"></li>
         </ul>
     </section>
     
     <section id="resolution">
         <h2>Resolution</h2>
-        <p>Show findings on how the influx of refugees affects crime rates, cost of living, and overall neighborhood dynamics.</p>
+        <p>Our analysis shows that the influx of refugees has various impacts on Seattle neighborhoods. While it does not increase crime rates, it can influence housing prices and the cost of living. This section provides a summary of our findings and highlights the overall impact of refugee immigration on neighborhood dynamics.</p>
+        <img src="images/resolution_placeholder.png" alt="Resolution">
     </section>
     
     <footer>
@@ -72,3 +78,4 @@
     <script src="scripts.js"></script>
 </body>
 </html>
+
