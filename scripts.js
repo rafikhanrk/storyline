@@ -32,6 +32,3 @@ document.addEventListener('DOMContentLoaded', () => {
             L.geoJSON(data).addTo(tukwilaMap);
         });
 });
-
-
-
