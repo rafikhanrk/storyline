@@ -3,74 +3,92 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>World History 10 Project</title>
+    <title>Refugee Impact in Seattle</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
-    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"/>
-    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"/>
-    <script src="https://d3js.org/d3.v5.min.js"></script>
-    <script src="https://unpkg.com/scrollama"></script>
-    <script src="https://cdn.jsdelivr.net/npm/c3/c3.min.js"></script>
-    <link href="https://cdn.jsdelivr.net/npm/c3/c3.min.css" rel="stylesheet" />
-    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.7.1/dist/leaflet.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.7.1/dist/leaflet.css" />
 </head>
 <body>
     <header>
-        <h1>World History 10 Project</h1>
-        <h2>By Rafi Khan</h2>
+        <h1>Impact of Refugee Immigration on Seattle Neighborhoods</h1>
+        <nav>
+            <ul>
+                <li><a href="#introduction">Introduction</a></li>
+                <li><a href="#confrontation">Confrontation</a></li>
+                <li><a href="#policy">Policy</a></li>
+                <li><a href="#questions">Questions</a></li>
+                <li><a href="#resolution">Resolution</a></li>
+            </ul>
+        </nav>
     </header>
-    <main>
-        <section class="scrolly">
-            <div class="step" data-step="1">
-                <h2>Introduction</h2>
-                <p>Refugee immigration statistics, particularly in the Washington/Seattle area, have shown a steady increase. Over the past decade, Washington has consistently been one of the top states for initial refugee resettlement. This is attributed to its diverse and inclusive communities, as well as robust support systems. The demographics of refugee entries into Washington have evolved, with notable increases in populations from conflict zones such as Syria, Somalia, and Myanmar. These immigrants contribute significantly to the cultural and economic landscape of the region.</p>
-                <div class="carousel">
-                    <div><img src="placeholder-image.jpg" alt="Introduction Image 1"></div>
-                    <div><img src="placeholder-image.jpg" alt="Introduction Image 2"></div>
-                    <div><img src="placeholder-image.jpg" alt="Introduction Image 3"></div>
-                </div>
-                <div id="map1"></div>
-            </div>
-            <div class="step" data-step="2">
-                <h2>Iraq and Syria Conflict</h2>
-                <p>The Iraq War and subsequent Syrian Civil War have had profound impacts on regional stability. In Iraq, the overthrow of Saddam Hussein led to a power vacuum that allowed extremist groups like AQI and ISIS to flourish. In Syria, the civil war created similar conditions, with various factions vying for control. The U.S. involvement in these conflicts, including military intervention and support for rebel groups, has had mixed outcomes, often exacerbating instability rather than resolving it.</p>
-                <div id="chart1"></div>
-                <div class="carousel">
-                    <div><img src="placeholder-image.jpg" alt="Iraq Conflict Image 1"></div>
-                    <div><img src="placeholder-image.jpg" alt="Iraq Conflict Image 2"></div>
-                    <div><img src="placeholder-image.jpg" alt="Iraq Conflict Image 3"></div>
-                </div>
-            </div>
-            <div class="step" data-step="3">
-                <h2>Terror in Iraq</h2>
-                <p>The rise of AQI and later ISIS in Iraq can be traced to the instability following the U.S. invasion. The dismantling of Saddam Hussein's regime without a robust plan for political transition led to a security vacuum. Extremist groups exploited this vacuum, presenting themselves as protectors of Sunni interests against the Shia-dominated government and foreign occupation forces. The ongoing violence and lack of effective governance provided fertile ground for these groups to recruit and expand their influence.</p>
-                <div class="carousel">
-                    <div><img src="placeholder-image.jpg" alt="Terror in Iraq Image 1"></div>
-                    <div><img src="placeholder-image.jpg" alt="Terror in Iraq Image 2"></div>
-                    <div><img src="placeholder-image.jpg" alt="Terror in Iraq Image 3"></div>
-                </div>
-            </div>
-            <div class="step" data-step="4">
-                <h2>Terror in Syria</h2>
-                <p>In Syria, the civil war has drawn in multiple external powers, each backing different factions. The U.S. support for groups like the Free Syrian Army and Kurdish forces has helped to check ISIS's expansion but also led to unintended consequences. The complex web of alliances and enmities has made the conflict intractable, with civilian populations bearing the brunt of the violence. The collapse of state institutions and the rise of extremist factions have made Syria one of the most challenging humanitarian crises of our time.</p>
-                <div id="map2"></div>
-            </div>
-            <div class="step" data-step="5">
-                <h2>Conclusion</h2>
-                <p>The involvement of the U.S. in Iraq and Syria has significantly contributed to the rise of extremist groups in the region. While the intent was to establish democracy and stability, the reality has often been the opposite. The power vacuums and instability have allowed groups like ISIS to emerge and thrive. Moving forward, it is crucial to adopt a more nuanced and locally-informed approach to intervention, focusing on sustainable political solutions and addressing the root causes of extremism.</p>
-                <div class="carousel">
-                    <div><img src="placeholder-image.jpg" alt="Conclusion Image 1"></div>
-                    <div><img src="placeholder-image.jpg" alt="Conclusion Image 2"></div>
-                    <div><img src="placeholder-image.jpg" alt="Conclusion Image 3"></div>
-                </div>
-            </div>
-        </section>
-    </main>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    
+    <section id="introduction">
+        <h2>Introduction</h2>
+        <p>Washington State, particularly the Seattle area, has seen a significant influx of refugees over the years. The state ranks as one of the top destinations for initial refugee resettlement in the U.S. This website explores the impact of refugee immigration on various neighborhoods in Seattle, providing detailed statistics, demographic information, and a comprehensive analysis of housing trends, crime rates, financial stability, and cultural integration.</p>
+        <p>Over the past few decades, the number of refugees settling in Seattle has increased steadily. These refugees come from diverse regions, including Africa, Southeast Asia, and the Middle East, bringing with them unique cultural, religious, and social dynamics that enrich the local communities. This influx has prompted various responses from local governments, non-profit organizations, and the communities themselves, aiming to support these new residents in their transition and integration into American society.</p>
+        <img src="images/statistics.jpg" alt="Refugee Statistics">
+        <img src="images/demographics.jpg" alt="Demographics Over Time">
+        <img src="images/map.jpg" alt="Map of Refugee Immigration to Washington">
+    </section>
+    
+    <section id="confrontation">
+        <h2>Confrontation</h2>
+        <div class="neighborhood" id="rainier-valley">
+            <h3>Rainier Valley</h3>
+            <p>Rainier Valley is one of Seattle's most ethnically diverse neighborhoods. Rainier Beach, located in the southern part of Rainier Valley, is home to a significant refugee population, with communities from Somalia, Vietnam, Ethiopia, and other countries. Columbia City and Hillman City, also within Rainier Valley, are notable for their diverse populations and range of community organizations that support the refugee population.</p>
+            <p>Rainier Beach is particularly notable for its vibrant cultural landscape. The area hosts numerous cultural festivals and community events that celebrate the diverse backgrounds of its residents. Local organizations provide resources such as housing assistance, legal aid, and language classes to help refugees adapt to their new environment. These efforts have fostered a sense of community and belonging among the residents. The neighborhood has seen a transformation over the years, with refugees opening businesses, participating in local governance, and contributing to the economic and social fabric of the area.</p>
+            <p>Despite the positive contributions, Rainier Valley faces challenges such as gentrification and displacement. As property values increase, there is a risk that low-income residents, including refugees, may be pushed out. Community organizations are working tirelessly to advocate for policies that protect affordable housing and support sustainable development that benefits all residents.</p>
+            <div id="rainier-map" class="map"></div>
+            <img src="images/rainier_valley.jpg" alt="Rainier Valley">
+        </div>
+        <div class="neighborhood" id="tukwila">
+            <h3>Tukwila</h3>
+            <p>Tukwila, located south of Seattle, has a high concentration of refugees, particularly from Somalia, Burma (Myanmar), and Bhutan. The area around Riverton Park United Methodist Church has become a significant hub for asylum seekers, with the church providing shelter and resources to a large number of migrants from countries like Venezuela, Angola, and Congo.</p>
+            <p>The influx of refugees in Tukwila has transformed the community, creating a melting pot of cultures and traditions. The local government, along with various non-profit organizations, has implemented numerous programs to assist refugees. These include housing initiatives, healthcare services, educational programs, and job training workshops. The community's proactive approach has been instrumental in helping refugees rebuild their lives and contribute positively to the local economy.</p>
+            <p>However, the situation at Riverton Park United Methodist Church highlights the challenges faced by many refugees. With limited resources and growing numbers, the church and local organizations often struggle to meet the needs of all refugees. This has led to calls for increased funding and support from the government and broader community to ensure that refugees have access to the necessary resources to thrive.</p>
+            <div id="tukwila-map" class="map"></div>
+            <img src="images/tukwila.jpg" alt="Tukwila">
+        </div>
+    </section>
+    
+    <section id="policy">
+        <h2>Policy Intervention</h2>
+        <p>Policy interventions from the Seattle government play a crucial role in supporting refugee populations. This section explores various policies, housing trends over time, and the historical context of the neighborhoods discussed. Interactive charts and graphs provide a visual representation of these trends and interventions.</p>
+        <p>The Seattle government has implemented numerous policies aimed at assisting refugees in their resettlement process. These policies focus on providing access to affordable housing, healthcare, education, and employment opportunities. Additionally, the city has partnered with various non-profit organizations to deliver comprehensive support services tailored to the needs of refugees.</p>
+        <p>Housing policies have been a significant area of focus, with efforts to increase the availability of affordable housing units and provide rental assistance to low-income refugee families. Education policies aim to ensure that refugee children have access to quality education and support services, including language assistance and tutoring programs. Healthcare policies focus on providing refugees with access to medical services, mental health support, and health education.</p>
+        <img src="images/policy.jpg" alt="Policy Intervention">
+    </section>
+    
+    <section id="questions">
+        <h2>Key Questions</h2>
+        <ul>
+            <li>Is it safe? <img src="images/safety.jpg" alt="Safety"></li>
+            <li>Is it livable? <img src="images/livability.jpg" alt="Livability"></li>
+            <li>Is it affordable? <img src="images/affordability.jpg" alt="Affordability"></li>
+            <li>Is it accommodating to their needs? <img src="images/needs.jpg" alt="Needs"></li>
+            <li>Is it accommodating to their religious duties? <img src="images/religious.jpg" alt="Religious Duties"></li>
+            <li>Is it accommodating to their culture? <img src="images/culture.jpg" alt="Culture"></li>
+        </ul>
+        <p>These questions address the fundamental aspects of refugee resettlement and integration. Safety is a primary concern, as refugees need to feel secure in their new homes. Livability encompasses the overall quality of life, including access to essential services and community resources. Affordability is critical, as many refugees face financial challenges upon arrival. Meeting the specific needs of refugees, including healthcare, education, and employment, is essential for their successful integration.</p>
+        <p>Religious and cultural accommodation are also vital, as refugees bring diverse beliefs and practices that enrich the community. Ensuring that there are adequate places of worship and cultural centers helps refugees maintain their identity while adapting to their new environment.</p>
+    </section>
+    
+    <section id="resolution">
+        <h2>Resolution</h2>
+        <p>Our analysis shows that the influx of refugees has various impacts on Seattle neighborhoods. While it does not increase crime rates, it can influence housing prices and the cost of living. This section provides a summary of our findings and highlights the overall impact of refugee immigration on neighborhood dynamics.</p>
+        <p>One of the most significant findings is that the presence of refugees does not correlate with an increase in crime rates. In fact, several studies suggest that refugee populations often contribute to lower crime rates due to strong community bonds and supportive networks. This challenges common misconceptions and highlights the positive contributions of refugees to community safety and stability.</p>
+        <p>Housing prices have been influenced by the influx of refugees, with some areas experiencing increased demand for affordable housing. This has prompted local governments to invest in housing initiatives to ensure that both refugees and existing residents have access to affordable housing options. The economic contributions of refugees, including their participation in the labor market and entrepreneurial activities, have also been notable, providing a boost to local economies.</p>
+        <img src="images/resolution.jpg" alt="Resolution">
+    </section>
+    
+    <footer>
+        <p>&copy; 2024 Refugee Impact Analysis. All rights reserved.</p>
+    </footer>
+
     <script src="scripts.js"></script>
 </body>
 </html>
+
 
 
 
