@@ -1,58 +1,77 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
     margin: 0;
     padding: 0;
     line-height: 1.6;
-    background-color: #f0f0f0;
+    background-color: #f9f9f9;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+    padding: 0 2rem;
 }
 
 header {
-    background: #4CAF50;
+    background: #333;
     color: #fff;
-    padding: 1rem 0;
-    text-align: center;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    padding-top: 1rem;
+    min-height: 70px;
+    border-bottom: #77aaff 3px solid;
+}
+
+header a {
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 16px;
+}
+
+header ul {
+    padding: 0;
+    list-style: none;
+}
+
+header li {
+    display: inline;
+    padding: 0 20px 0 20px;
 }
 
 header h1 {
+    float: left;
     margin: 0;
+    font-size: 24px;
+    margin-left: 20px;
 }
 
-nav ul {
-    list-style: none;
-    padding: 0;
-}
-
-nav ul li {
-    display: inline;
-    margin: 0 1rem;
-}
-
-nav ul li a {
-    color: #fff;
-    text-decoration: none;
-    font-weight: bold;
+nav {
+    float: right;
+    margin-top: 10px;
 }
 
 section {
-    padding: 2rem;
-    background: #fff;
-    margin: 2rem 0;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-}
-
-h2 {
-    color: #4CAF50;
-}
-
-.neighborhood {
+    padding: 2rem 0;
     margin-bottom: 2rem;
 }
 
-.neighborhood h3 {
-    margin-top: 0;
+h2 {
     color: #333;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+h3 {
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.neighborhood {
+    background: #fff;
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
 }
 
 footer {
@@ -60,16 +79,16 @@ footer {
     color: #fff;
     text-align: center;
     padding: 1rem 0;
-    position: fixed;
-    width: 100%;
+    border-top: #77aaff 3px solid;
+    position: relative;
     bottom: 0;
+    width: 100%;
 }
 
 .map {
     height: 300px;
     margin: 1rem 0;
-    border-radius: 8px;
-    overflow: hidden;
+    border-radius: 10px;
 }
 
 img {
@@ -78,4 +97,3 @@ img {
     display: block;
     margin: 1rem 0;
 }
-
