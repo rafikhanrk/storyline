@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }).addTo(tukwilaMap);
     fetch('tukwila.geojson')
         .then(response => response.json())
-        .then(data => {
+        .then data => {
             L.geoJSON(data).addTo(tukwilaMap);
         });
 });
