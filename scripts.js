@@ -1,15 +1,4 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const navLinks = document.querySelectorAll('nav ul li a');
-
-    navLinks.forEach(link => {
-        link.addEventListener('click', function(e) {
-            e.preventDefault();
-            const targetId = this.getAttribute('href').substring(1);
-            const targetSection = document.getElementById(targetId);
-            targetSection.scrollIntoView({ behavior: 'smooth' });
-        });
-    });
-
     // Initialize the map for Rainier Valley
     const rainierMap = L.map('rainier-map').setView([47.5114, -122.2587], 13);
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
@@ -28,7 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }).addTo(tukwilaMap);
     fetch('tukwila.geojson')
         .then(response => response.json())
-        .then data => {
+        .then(data => {
             L.geoJSON(data).addTo(tukwilaMap);
         });
 });
