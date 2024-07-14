@@ -1,23 +1,34 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // Initialize the map for Rainier Valley
-    const rainierMap = L.map('rainier-map').setView([47.5114, -122.2587], 13);
-    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-    }).addTo(rainierMap);
-    fetch('rainier_beach.geojson')
-        .then(response => response.json())
-        .then(data => {
-            L.geoJSON(data).addTo(rainierMap);
+    const slides = document.querySelectorAll('.slide');
+    const hash = window.location.hash || '#slide1';
+    const targetSlide = document.querySelector(hash);
+    
+    if (targetSlide) {
+        targetSlide.style.display = 'block';
+        targetSlide.style.left = '0';
+    }
+    
+    slides.forEach(slide => {
+        slide.addEventListener('transitionend', () => {
+            if (!slide.matches(hash)) {
+                slide.style.display = 'none';
+            }
         });
+    });
 
-    // Initialize the map for Tukwila
-    const tukwilaMap = L.map('tukwila-map').setView([47.4747, -122.2755], 13);
-    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-    }).addTo(tukwilaMap);
-    fetch('tukwila.geojson')
-        .then(response => response.json())
-        .then(data => {
-            L.geoJSON(data).addTo(tukwilaMap);
+    document.querySelectorAll('a').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            const target = document.querySelector(this.getAttribute('href'));
+            
+            slides.forEach(slide => {
+                if (slide !== target) {
+                    slide.style.left = '100%';
+                    slide.style.display = 'none';
+                }
+            });
+
+            target.style.display = 'block';
+            setTimeout(() => target.style.left = '0', 10);
         });
+    });
 });
