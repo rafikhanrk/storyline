@@ -48,6 +48,7 @@ nav ul li a {
     position: relative;
     width: 100%;
     overflow: hidden;
+    min-height: 100vh;
 }
 
 .slide {
@@ -62,10 +63,14 @@ nav ul li a {
     background-color: #fff;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    opacity: 0;
+    z-index: 0;
 }
 
 .slide:target {
     left: 0;
+    opacity: 1;
+    z-index: 1;
 }
 
 h2 {
