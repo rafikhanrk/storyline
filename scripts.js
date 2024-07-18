@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', () => {
             });
 
             target.style.display = 'block';
-            setTimeout(() => target.style.left = '0', 10);
+            setTimeout(() => target.style.left = '0', 0);
         });
     });
 });
