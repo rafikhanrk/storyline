@@ -15,12 +15,10 @@
         <section>
             <h2>Current Policies</h2>
             <p>Overview of existing policies impacting refugee housing.</p>
-            <img src="images/policies.jpg" alt="Policies">
         </section>
         <section>
             <h2>Policy Analysis</h2>
             <p>Critical analysis of the effectiveness of these policies.</p>
-            <canvas id="policyAnalysisChart"></canvas>
         </section>
         <section>
             <h2>Recommendations</h2>
@@ -29,44 +27,11 @@
         <section>
             <h2>Case Studies</h2>
             <p>Examples of successful policy interventions from other regions or countries.</p>
-            <div id="caseStudiesMap" style="height: 400px;"></div>
         </section>
     </main>
     <footer>
         <p>&copy; 2024 Refugee Housing Crisis Project</p>
     </footer>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
-    <script>
-        // Placeholder for policy analysis chart
-        var ctx = document.getElementById('policyAnalysisChart').getContext('2d');
-        var policyAnalysisChart = new Chart(ctx, {
-            type: 'line',
-            data: {
-                labels: ['Policy 1', 'Policy 2', 'Policy 3'],
-                datasets: [{
-                    label: 'Effectiveness',
-                    data: [30, 50, 70],
-                    backgroundColor: 'rgba(153, 102, 255, 0.2)',
-                    borderColor: 'rgba(153, 102, 255, 1)',
-                    borderWidth: 1
-                }]
-            },
-            options: {
-                scales: {
-                    y: {
-                        beginAtZero: true
-                    }
-                }
-            }
-        });
-
-        // Placeholder for Leaflet.js
-        var map = L.map('caseStudiesMap').setView([47.6062, -122.3321], 10);
-        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-        }).addTo(map);
-    </script>
     <script>
         // Include navigation dynamically
         fetch('navigation.html')
