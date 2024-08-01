@@ -15,143 +15,24 @@
         <section>
             <h2>Overview of Neighborhoods</h2>
             <p>Brief descriptions of each neighborhood studied (Rainier Valley, Tukwila, SeaTac, Kent, and White Center).</p>
-            <img src="images/neighborhoods.jpg" alt="Neighborhoods">
         </section>
         <section>
             <h2>Detailed Analysis</h2>
             <h3>Rainier Valley</h3>
             <p>Housing trends, crime rates, financial stability, cultural integration.</p>
-            <canvas id="rainierValleyChart"></canvas>
             <h3>Tukwila</h3>
             <p>Housing trends, crime rates, financial stability, cultural integration.</p>
-            <canvas id="tukwilaChart"></canvas>
             <h3>SeaTac</h3>
             <p>Housing trends, crime rates, financial stability, cultural integration.</p>
-            <canvas id="seaTacChart"></canvas>
             <h3>Kent</h3>
             <p>Housing trends, crime rates, financial stability, cultural integration.</p>
-            <canvas id="kentChart"></canvas>
             <h3>White Center</h3>
             <p>Housing trends, crime rates, financial stability, cultural integration.</p>
-            <canvas id="whiteCenterChart"></canvas>
         </section>
     </main>
     <footer>
         <p>&copy; 2024 Refugee Housing Crisis Project</p>
     </footer>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <script>
-        // Placeholder for neighborhood charts
-        var ctx = document.getElementById('rainierValleyChart').getContext('2d');
-        var rainierValleyChart = new Chart(ctx, {
-            type: 'bar',
-            data: {
-                labels: ['Housing Trends', 'Crime Rates', 'Financial Stability', 'Cultural Integration'],
-                datasets: [{
-                    label: 'Rainier Valley',
-                    data: [10, 20, 30, 40],
-                    backgroundColor: 'rgba(75, 192, 192, 0.2)',
-                    borderColor: 'rgba(75, 192, 192, 1)',
-                    borderWidth: 1
-                }]
-            },
-            options: {
-                scales: {
-                    y: {
-                        beginAtZero: true
-                    }
-                }
-            }
-        });
-
-        var ctx2 = document.getElementById('tukwilaChart').getContext('2d');
-        var tukwilaChart = new Chart(ctx2, {
-            type: 'bar',
-            data: {
-                labels: ['Housing Trends', 'Crime Rates', 'Financial Stability', 'Cultural Integration'],
-                datasets: [{
-                    label: 'Tukwila',
-                    data: [15, 25, 35, 45],
-                    backgroundColor: 'rgba(153, 102, 255, 0.2)',
-                    borderColor: 'rgba(153, 102, 255, 1)',
-                    borderWidth: 1
-                }]
-            },
-            options: {
-                scales: {
-                    y: {
-                        beginAtZero: true
-                    }
-                }
-            }
-        });
-
-        var ctx3 = document.getElementById('seaTacChart').getContext('2d');
-        var seaTacChart = new Chart(ctx3, {
-            type: 'bar',
-            data: {
-                labels: ['Housing Trends', 'Crime Rates', 'Financial Stability', 'Cultural Integration'],
-                datasets: [{
-                    label: 'SeaTac',
-                    data: [12, 22, 32, 42],
-                    backgroundColor: 'rgba(255, 159, 64, 0.2)',
-                    borderColor: 'rgba(255, 159, 64, 1)',
-                    borderWidth: 1
-                }]
-            },
-            options: {
-                scales: {
-                    y: {
-                        beginAtZero: true
-                    }
-                }
-            }
-        });
-
-        var ctx4 = document.getElementById('kentChart').getContext('2d');
-        var kentChart = new Chart(ctx4, {
-            type: 'bar',
-            data: {
-                labels: ['Housing Trends', 'Crime Rates', 'Financial Stability', 'Cultural Integration'],
-                datasets: [{
-                    label: 'Kent',
-                    data: [17, 27, 37, 47],
-                    backgroundColor: 'rgba(54, 162, 235, 0.2)',
-                    borderColor: 'rgba(54, 162, 235, 1)',
-                    borderWidth: 1
-                }]
-            },
-            options: {
-                scales: {
-                    y: {
-                        beginAtZero: true
-                    }
-                }
-            }
-        });
-
-        var ctx5 = document.getElementById('whiteCenterChart').getContext('2d');
-        var whiteCenterChart = new Chart(ctx5, {
-            type: 'bar',
-            data: {
-                labels: ['Housing Trends', 'Crime Rates', 'Financial Stability', 'Cultural Integration'],
-                datasets: [{
-                    label: 'White Center',
-                    data: [20, 30, 40, 50],
-                    backgroundColor: 'rgba(255, 99, 132, 0.2)',
-                    borderColor: 'rgba(255, 99, 132, 1)',
-                    borderWidth: 1
-                }]
-            },
-            options: {
-                scales: {
-                    y: {
-                        beginAtZero: true
-                    }
-                }
-            }
-        });
-    </script>
     <script>
         // Include navigation dynamically
         fetch('navigation.html')
