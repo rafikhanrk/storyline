@@ -82,9 +82,9 @@
                         scrollyMap.setView([47.5171, -122.2684], 14); // Rainier Beach
                         break;
                 }
-                setTimeout(() => {
+                scrollyMap.once('moveend', () => {
                     scrollyMap.invalidateSize();
-                }, 500); // Delay to allow transition to complete
+                });
             });
     </script>
 </body>
