@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Refugee Housing Crisis in Seattle Area - Statistics</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Refugee Statistics</h1>
+    </header>
+    <div id="nav-placeholder"></div>
+    <main>
+        <section>
+            <h2>Demographics</h2>
+            <canvas id="demographicsChart"></canvas>
+        </section>
+        <section>
+            <h2>Immigration Trends</h2>
+            <canvas id="trendsChart"></canvas>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Refugee Housing Crisis Project</p>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        // Placeholder for demographics chart
+        var ctx = document.getElementById('demographicsChart').getContext('2d');
+        var demographicsChart = new Chart(ctx, {
+            type: 'pie',
+            data: {
+                labels: ['Group 1', 'Group 2', 'Group 3'],
+                datasets: [{
+                    label: 'Demographics',
+                    data: [10, 20, 30],
+                    backgroundColor: [
+                        'rgba(75, 192, 192, 0.2)',
+                        'rgba(153, 102, 255, 0.2)',
+                        'rgba(255, 159, 64, 0.2)'
+                    ],
+                    borderColor: [
+                        'rgba(75, 192, 192, 1)',
+                        'rgba(153, 102, 255, 1)',
+                        'rgba(255, 159, 64, 1)'
+                    ],
+                    borderWidth: 1
+                }]
+            }
+        });
+
+        // Placeholder for immigration trends chart
+        var ctx2 = document.getElementById('trendsChart').getContext('2d');
+        var trendsChart = new Chart(ctx2, {
+            type: 'line',
+            data: {
+                labels: ['2000', '2005', '2010', '2015', '2020'],
+                datasets: [{
+                    label: 'Immigration Trends',
+                    data: [10, 50, 25, 75, 60],
+                    backgroundColor: 'rgba(75, 192, 192, 0.2)',
+                    borderColor: 'rgba(75, 192, 192, 1)',
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+    </script>
+    <script>
+        // Include navigation dynamically
+        fetch('navigation.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('nav-placeholder').innerHTML = data;
+            });
+    </script>
+</body>
+</html>
