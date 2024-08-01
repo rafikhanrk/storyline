@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Refugee Housing Crisis in Seattle Area - Neighborhoods</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Neighborhood Analysis</h1>
+    </header>
+    <div id="nav-placeholder"></div>
+    <main>
+        <section>
+            <h2>Overview of Neighborhoods</h2>
+            <p>Brief descriptions of each neighborhood studied (Rainier Valley, Tukwila, SeaTac, Kent, and White Center).</p>
+        </section>
+        <section>
+            <h2>Detailed Analysis</h2>
+            <h3>Rainier Valley</h3>
+            <p>Housing trends, crime rates, financial stability, cultural integration.</p>
+            <h3>Tukwila</h3>
+            <p>Housing trends, crime rates, financial stability, cultural integration.</p>
+            <h3>SeaTac</h3>
+            <p>Housing trends, crime rates, financial stability, cultural integration.</p>
+            <h3>Kent</h3>
+            <p>Housing trends, crime rates, financial stability, cultural integration.</p>
+            <h3>White Center</h3>
+            <p>Housing trends, crime rates, financial stability, cultural integration.</p>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Refugee Housing Crisis Project</p>
+    </footer>
+    <script>
+        // Include navigation dynamically
+        fetch('navigation.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('nav-placeholder').innerHTML = data;
+            });
+    </script>
+</body>
+</html>
