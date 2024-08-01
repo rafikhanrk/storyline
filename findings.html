@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Refugee Housing Crisis in Seattle Area - Findings</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Findings and Impact</h1>
+    </header>
+    <div id="nav-placeholder"></div>
+    <main>
+        <section>
+            <h2>Key Findings</h2>
+            <p>Summary of the most significant findings from the research.</p>
+        </section>
+        <section>
+            <h2>Impact Analysis</h2>
+            <p>How these findings impact the local communities and refugees.</p>
+        </section>
+        <section>
+            <h2>Personal Stories</h2>
+            <p>Anecdotal stories or interviews with refugees to humanize the data.</p>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Refugee Housing Crisis Project</p>
+    </footer>
+    <script>
+        // Include navigation dynamically
+        fetch('navigation.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('nav-placeholder').innerHTML = data;
+            });
+    </script>
+</body>
+</html>
