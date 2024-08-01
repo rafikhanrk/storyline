@@ -36,7 +36,7 @@
         <section id="scroll-visualization">
             <div id="scrolly">
                 <div id="map-container">
-                    <div id="scrolly-map"></div>
+                    <div id="scrolly-map" style="height: 600px;"></div>
                 </div>
                 <div id="scrolly-text">
                     <section class="step" data-step="1">
@@ -97,9 +97,6 @@
         // Scrollama setup
         const scroller = scrollama();
 
-        const mapContainer = d3.select("#scrolly-map");
-        const steps = d3.selectAll(".step");
-
         const scrollyMap = L.map('scrolly-map').setView([47.6062, -122.3321], 10);
         L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
             attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
@@ -112,9 +109,9 @@
                 debug: true
             })
             .onStepEnter(response => {
-                steps.classed("is-active", (d, i) => i === response.index);
+                const stepIndex = response.index;
 
-                switch(response.index) {
+                switch(stepIndex) {
                     case 0:
                         scrollyMap.setView([47.6062, -122.3321], 10);
                         break;
@@ -125,6 +122,9 @@
                         scrollyMap.setView([47.6132, -122.3455], 14);
                         break;
                 }
+                setTimeout(() => {
+                    scrollyMap.invalidateSize();
+                }, 500); // Delay to allow transition to complete
             });
     </script>
 </body>
