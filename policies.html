@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Refugee Housing Crisis in Seattle Area - Policies</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Policy Interventions</h1>
+    </header>
+    <div id="nav-placeholder"></div>
+    <main>
+        <section>
+            <h2>Current Policies</h2>
+            <p>Overview of existing policies impacting refugee housing.</p>
+        </section>
+        <section>
+            <h2>Policy Analysis</h2>
+            <p>Critical analysis of the effectiveness of these policies.</p>
+        </section>
+        <section>
+            <h2>Recommendations</h2>
+            <p>Suggestions for policy improvements based on research findings.</p>
+        </section>
+        <section>
+            <h2>Case Studies</h2>
+            <p>Examples of successful policy interventions from other regions or countries.</p>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Refugee Housing Crisis Project</p>
+    </footer>
+    <script>
+        // Include navigation dynamically
+        fetch('navigation.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('nav-placeholder').innerHTML = data;
+            });
+    </script>
+</body>
+</html>
