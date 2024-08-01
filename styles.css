@@ -95,7 +95,7 @@ canvas {
     height: auto;
 }
 
-#map, #findings-map {
+#map, #findings-map, #methodologyMap, #scrolly-map {
     width: 100%;
     height: 400px;
     margin-top: 20px;
@@ -110,4 +110,30 @@ canvas {
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     margin-bottom: 20px;
+}
+
+#scrolly {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+}
+
+#map-container {
+    flex: 1;
+    position: sticky;
+    top: 0;
+    height: 100vh;
+}
+
+#scrolly-text {
+    flex: 1;
+    padding: 20px;
+}
+
+.step {
+    margin-bottom: 100vh;
+}
+
+.is-active {
+    color: #800020;
 }
