@@ -1,121 +1,113 @@
 body {
-    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f9f9f9;
-    color: #333;
-}
-
-.container {
-    width: 90%;
-    max-width: 1200px;
-    margin: auto;
-    padding: 2rem 1rem;
+    background-color: #F5F5DC;
+    color: #2C3E50;
+    overflow-x: hidden;
 }
 
 header {
-    background: #4CAF50;
-    color: #fff;
-    padding: 1rem 0;
+    background-color: #2C3E50;
+    color: #F5F5DC;
+    padding: 20px;
     text-align: center;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
-header h1 {
-    margin: 0;
+nav {
+    background-color: #800020;
+    overflow: hidden;
 }
 
 nav ul {
-    list-style: none;
+    list-style-type: none;
+    margin: 0;
     padding: 0;
-    margin: 1rem 0;
-    display: flex;
-    justify-content: center;
 }
 
 nav ul li {
-    margin: 0 1rem;
+    float: left;
 }
 
 nav ul li a {
-    color: #fff;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 1.2rem;
-}
-
-.slides {
-    position: relative;
-    width: 100%;
-    overflow: hidden;
-    min-height: 100vh;
-}
-
-.slide {
-    width: 100%;
-    min-height: 100vh;
-    position: absolute;
-    top: 0;
-    left: 100%;
-    transition: left 0.5s ease-in-out;
-    padding: 2rem;
-    box-sizing: border-box;
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    display: none;
-}
-
-.slide:target {
-    left: 0;
     display: block;
-    opacity: 1;
-    z-index: 1;
+    color: #F5F5DC;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    background-color: #2C3E50;
+}
+
+main {
+    padding: 20px;
 }
 
 h2 {
-    color: #4CAF50;
-    text-align: center;
-    font-size: 2rem;
+    color: #800020;
+    font-size: 2em;
+    margin-bottom: 10px;
 }
 
-ul {
-    list-style-type: disc;
-    padding-left:### 3. JavaScript (`scripts.js`):
-This file will manage the slide transitions and animations.
+h3 {
+    color: #355E3B;
+    font-size: 1.5em;
+}
 
-```javascript
-document.addEventListener('DOMContentLoaded', () => {
-    const slides = document.querySelectorAll('.slide');
-    const hash = window.location.hash || '#slide1';
-    const targetSlide = document.querySelector(hash);
-    
-    if (targetSlide) {
-        targetSlide.style.display = 'block';
-        targetSlide.style.left = '0';
-    }
-    
-    slides.forEach(slide => {
-        slide.addEventListener('transitionend', () => {
-            if (!slide.matches(hash)) {
-                slide.style.display = 'none';
-            }
-        });
-    });
+section {
+    margin-bottom: 20px;
+    background-color: #D2B48C;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
 
-    document.querySelectorAll('a').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-            const target = document.querySelector(this.getAttribute('href'));
-            
-            slides.forEach(slide => {
-                if (slide !== target) {
-                    slide.style.left = '100%';
-                    slide.style.display = 'none';
-                }
-            });
+p {
+    font-size: 1.2em;
+    line-height: 1.6;
+    font-weight: bold;
+}
 
-            target.style.display = 'block';
-            setTimeout(() => target.style.left = '0', 0);
-        });
-    });
-});
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+footer {
+    background-color: #2C3E50;
+    color: #F5F5DC;
+    text-align: center;
+    padding: 10px 0;
+    position: relative;
+    width: 100%;
+    bottom: 0;
+}
+
+#statistics, #rainier-valley, #columbia-city, #tukwila, #white-center, #resolution, #country-distribution {
+    margin-bottom: 20px;
+}
+
+canvas {
+    max-width: 100%;
+    height: auto;
+}
+
+#map, #findings-map {
+    width: 100%;
+    height: 400px;
+    margin-top: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.box {
+    background-color: #F5F5DC;
+    padding: 15px;
+    border: 1px solid #D2B48C;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
