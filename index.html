@@ -5,6 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Refugee Housing Crisis in Seattle Area - Home</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.16.0/d3.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/scrollama/2.2.1/scrollama.min.js"></script>
 </head>
 <body>
     <header>
@@ -28,13 +33,29 @@
             <div id="map" style="height: 400px;"></div>
             <!-- Add an introductory video if available -->
         </section>
+        <section id="scroll-visualization">
+            <div id="scrolly">
+                <div id="map-container">
+                    <div id="scrolly-map"></div>
+                </div>
+                <div id="scrolly-text">
+                    <section class="step" data-step="1">
+                        <p>Seattle area overview.</p>
+                    </section>
+                    <section class="step" data-step="2">
+                        <p>Refugee statistics in the Seattle area.</p>
+                    </section>
+                    <section class="step" data-step="3">
+                        <p>Impact on local communities.</p>
+                    </section>
+                </div>
+            </div>
+        </section>
     </main>
     <footer>
         <p>&copy; 2024 Refugee Housing Crisis Project</p>
     </footer>
     <script src="scripts.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
     <script>
         // Placeholder for Chart.js
         var ctx = document.getElementById('keyStatsChart').getContext('2d');
@@ -71,6 +92,39 @@
             .then(response => response.text())
             .then(data => {
                 document.getElementById('nav-placeholder').innerHTML = data;
+            });
+
+        // Scrollama setup
+        const scroller = scrollama();
+
+        const mapContainer = d3.select("#scrolly-map");
+        const steps = d3.selectAll(".step");
+
+        const scrollyMap = L.map('scrolly-map').setView([47.6062, -122.3321], 10);
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        }).addTo(scrollyMap);
+
+        scroller
+            .setup({
+                step: ".step",
+                offset: 0.5,
+                debug: true
+            })
+            .onStepEnter(response => {
+                steps.classed("is-active", (d, i) => i === response.index);
+
+                switch(response.index) {
+                    case 0:
+                        scrollyMap.setView([47.6062, -122.3321], 10);
+                        break;
+                    case 1:
+                        scrollyMap.setView([47.6097, -122.3331], 12);
+                        break;
+                    case 2:
+                        scrollyMap.setView([47.6132, -122.3455], 14);
+                        break;
+                }
             });
     </script>
 </body>
