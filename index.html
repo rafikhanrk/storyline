@@ -122,9 +122,9 @@
                         scrollyMap.setView([47.6132, -122.3455], 14);
                         break;
                 }
-                setTimeout(() => {
+                scrollyMap.once('moveend', () => {
                     scrollyMap.invalidateSize();
-                }, 500); // Delay to allow transition to complete
+                });
             });
     </script>
 </body>
