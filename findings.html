@@ -15,47 +15,19 @@
         <section>
             <h2>Key Findings</h2>
             <p>Summary of the most significant findings from the research.</p>
-            <img src="images/findings.jpg" alt="Findings">
         </section>
         <section>
             <h2>Impact Analysis</h2>
             <p>How these findings impact the local communities and refugees.</p>
-            <canvas id="impactAnalysisChart"></canvas>
         </section>
         <section>
             <h2>Personal Stories</h2>
             <p>Anecdotal stories or interviews with refugees to humanize the data.</p>
-            <img src="images/personal_stories.jpg" alt="Personal Stories">
         </section>
     </main>
     <footer>
         <p>&copy; 2024 Refugee Housing Crisis Project</p>
     </footer>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <script>
-        // Placeholder for impact analysis chart
-        var ctx = document.getElementById('impactAnalysisChart').getContext('2d');
-        var impactAnalysisChart = new Chart(ctx, {
-            type: 'radar',
-            data: {
-                labels: ['Community Impact', 'Economic Impact', 'Social Impact'],
-                datasets: [{
-                    label: 'Impact',
-                    data: [50, 60, 70],
-                    backgroundColor: 'rgba(255, 159, 64, 0.2)',
-                    borderColor: 'rgba(255, 159, 64, 1)',
-                    borderWidth: 1
-                }]
-            },
-            options: {
-                scales: {
-                    y: {
-                        beginAtZero: true
-                    }
-                }
-            }
-        });
-    </script>
     <script>
         // Include navigation dynamically
         fetch('navigation.html')
