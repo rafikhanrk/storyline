@@ -15,19 +15,56 @@
         <section>
             <h2>Background Information</h2>
             <p>Detailed context about the refugee housing crisis.</p>
+            <img src="images/background.jpg" alt="Background Image">
         </section>
         <section>
             <h2>Objectives</h2>
             <p>The main goals and questions the research aims to address.</p>
+            <canvas id="objectivesChart"></canvas>
         </section>
         <section>
             <h2>Methodology</h2>
             <p>An explanation of the research methods and data sources used.</p>
+            <div id="methodologyMap" style="height: 400px;"></div>
         </section>
     </main>
     <footer>
         <p>&copy; 2024 Refugee Housing Crisis Project</p>
     </footer>
+    <script src="scripts.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script>
+        // Placeholder for Chart.js
+        var ctx = document.getElementById('objectivesChart').getContext('2d');
+        var objectivesChart = new Chart(ctx, {
+            type: 'pie',
+            data: {
+                labels: ['Objective 1', 'Objective 2', 'Objective 3'],
+                datasets: [{
+                    label: 'Objectives',
+                    data: [10, 20, 30],
+                    backgroundColor: [
+                        'rgba(75, 192, 192, 0.2)',
+                        'rgba(153, 102, 255, 0.2)',
+                        'rgba(255, 159, 64, 0.2)'
+                    ],
+                    borderColor: [
+                        'rgba(75, 192, 192, 1)',
+                        'rgba(153, 102, 255, 1)',
+                        'rgba(255, 159, 64, 1)'
+                    ],
+                    borderWidth: 1
+                }]
+            }
+        });
+
+        // Placeholder for Leaflet.js
+        var map = L.map('methodologyMap').setView([47.6062, -122.3321], 10);
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        }).addTo(map);
+    </script>
     <script>
         // Include navigation dynamically
         fetch('navigation.html')
